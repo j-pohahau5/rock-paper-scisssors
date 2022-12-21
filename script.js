@@ -1,9 +1,16 @@
 var choices = ["r", "p", "s"]
-var computerChoices = choices[Math.floor(Math.random()*3)]
+var computerChoices = choices[Math.floor(Math.random()*choices.length)]
+var wins = 0;
+var losses = 0;
+var ties = 0;
+
+for (var i = 0; i > 10; i++) {
+   
+}
 
 function displayPrompt(choices){
   var usersChoice =  prompt("Choose rock, paper, or scissors") 
-  confirm("Please press ok if you want this choice")
+  confirm("Computers choice " + computerChoices)
   if (usersChoice === "r" && computerChoices === "r"){
     alert("tie")
   } else if (usersChoice === "s" && computerChoices === "s"){
@@ -23,8 +30,6 @@ function displayPrompt(choices){
   } else if (usersChoice === "p" && computerChoices === "s"){
     alert("you loss")
   }
-  confirm("would you like to play again press ok for yes")
-
 }
 displayPrompt()
 
